@@ -13,7 +13,7 @@
  top=25mm,
  bottom=25mm
  }
-\title{\textbf{Game of Thrones} \\ House of D2SI}
+\title{\textbf{Game of Thrones} \\ House of KCF}
 \date{\vspace{-35ex}}
 \begin{document}
 \maketitle
@@ -21,7 +21,7 @@
 \section{Context}
 Aemon the Castle Black's maester is a close advisor of Jeor Mormont, the Lord Commander. He is also the Castle Black's library director. This library has hundreds of thousands of books and some of them are so rare you can not even find them in the Citadel. 
 \\\\
-Searching information in this huge books collection is getting more and more challenging for Aemon as the years pass. He decided to ask Sam, his favorite trainee for some help to find a way to easily \textbf{search information in documents from keywords}. Then Sam asked his friend Jon Snow who always liked information search and data engineering.
+Searching information in this huge books collection is getting more and more challenging for Aemon as the years pass. He decided to ask You and Jon Snow his friends and colleagues, who always liked information search and data engineering for some help to find a way to easily \textbf{search information in documents from keywords}.
 \\\\
 Jon Snow decided to use vector representation of documents. Search engines use different kind of document representations and one of them is the vector representation. It gives the ability to directly use mathematical tools such as distance, similarity and dimension reduction.
 \\\\
@@ -35,23 +35,23 @@ We have a collection of N documents. In our case we have one file per document a
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.45]{images/dataset}
-    \caption{Document collection}
+    \caption{Document Collection}
     \label{fig:documents}
 \end{figure}
-\subsection{Dictionnary}
-We want a dictionnary that matches every word from the documents with a unique id. See the figure \ref{fig:dictionnary} for a sample.
+\subsection{Dictionary}
+We want a Dictionary that matches every word from the documents with a unique id. See the figure \ref{fig:Dictionary} for a sample.
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.75]{images/dictionnary}
-    \caption{Dictionnary example}
-    \label{fig:dictionnary}
+    \includegraphics[scale=0.75]{images/Dictionary}
+    \caption{Dictionary Example}
+    \label{fig:Dictionary}
 \end{figure}
 \subsubsection{Inverted index}
-Using both the dataset and the dictionnary we can build an inverted index that gives, for every word, the list of documents it appears in. See the figure \ref{fig:inverted_index}.
+Using both the dataset and the Dictionary we can build an inverted index that gives, for every word, the list of documents it appears in. See the figure \ref{fig:inverted_index}.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.65]{images/inverted_index}
-    \caption{Inverted index example}
+    \caption{Inverted Index Example}
     \label{fig:inverted_index}
 \end{figure}
 We want a solution that works on a massive dataset. Our algorithm has to be able to run on a distributed system so we are not limited by the amount of storage, memory and CPU of a single machine. 
@@ -75,7 +75,7 @@ Associated algorithm: \href{https://nlp.stanford.edu/IR-book/html/htmledition/bl
 
 \section{Questions}
 You will find the dataset of documents in the \textit{dataset} folder of the repository.
-\paragraph{1.} Implement a job to build the dictionnary. Every line of the output file will be the word and its id. In the documents of the given dataset the words are separated by one or multiple spaces.
+\paragraph{1.} Implement a job to build the Dictionary. Every line of the output file will be the word and its id. In the documents of the given dataset the words are separated by one or multiple spaces.
 \paragraph{2.} Implement one or multiple jobs to build the inverted index.
 \\\\
 You may use Hadoop or Spark for those jobs, and the language you prefer.
